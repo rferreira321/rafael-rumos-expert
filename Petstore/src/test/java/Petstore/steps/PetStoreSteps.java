@@ -85,5 +85,9 @@ public class PetStoreSteps {
 
     }
 
+    @After
+    public void close() {
+        BrowserConfig.closeBrowser(driver);
+    }
 
 }
