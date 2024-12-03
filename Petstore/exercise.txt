@@ -1,0 +1,68 @@
+Prezado(a) Aluno(a),
+
+O desafio proposto para a Certificação Rumos Expert envolve a implementação prática de automação de testes em um e-commerce, utilizando o Selenium WebDriver,
+e a posterior avaliação do projeto com base em critérios específicos.
+Abaixo, detalhamos os passos que você deve seguir:
+
+Desafio:
+1. Escolha um E-commerce:
+Selecione um e-commerce de sua preferência que atenda aos requisitos específicos, como:
+
+(DONE)Registro de Usuário:
+O site deve permitir que um usuário crie uma conta fornecendo nome, endereço de e-mail e senha.
+
+(DONE)Autenticacao de Usuário:
+O site deve permitir que um usuário se autentique uma conta fornecendo usuario e senha
+
+(DONE)Pesquisa e Visualização de Produtos:
+O site deve ter uma barra de pesquisa onde o usuário pode buscar por produtos.
+Os resultados da pesquisa devem ser exibidos corretamente, com informações como nome, preço e descrição.
+O usuário deve poder visualizar os detalhes de um produto selecionado.
+
+(DONE)Adição de Itens ao Carrinho de Compras:
+O usuário deve poder adicionar itens ao carrinho de compras a partir da página de detalhes do produto.
+Os itens adicionados devem ser exibidos corretamente no carrinho de compras.
+
+Finalização da Compra:
+O usuario deve se autenticar na plataforma
+Escolher um produto
+O usuário deve poder prosseguir para a finalização da compra a partir do carrinho de compras.
+O site deve solicitar informações de pagamento e endereço de entrega.
+Após a finalização da compra, o usuário deve receber uma confirmação de compra..
+
+
+
+2. Implementação com Selenium WebDriver:
+
+Utilize o Selenium WebDriver para implementar casos de teste automatizados para cada um dos requisitos mencionados.
+Certifique-se de que a automação reflita fielmente o comportamento esperado do usuário no e-commerce.
+Avaliação do Projeto:
+
+3. Sua implementação será avaliada com base nos seguintes critérios:
+
+Organização da Estrutura do Projeto (10%): Avaliação da organização de arquivos e pastas para garantir uma estrutura lógica e de fácil manutenção.
+
+Nomenclatura Adequada (10%): Verificação da utilização de nomenclaturas claras e descritivas para elementos da interface, métodos e classes.
+
+Utilização de Page Objects (12%): Análise da correta aplicação de Page Objects para separação de responsabilidades e manutenção da modularidade.
+
+Uso de Waits e Esperas Explícitas (10%): Avaliação da implementação adequada de waits para garantir estabilidade e confiabilidade dos testes.
+
+Tratamento de Erros (8%): Verificação do tratamento robusto de erros, com captura e registro eficientes de exceções.
+
+Manutenção e Reutilização de Código (12%): Avaliação da criação de funções e métodos reutilizáveis para promover a manutenção eficiente do código.
+
+Implementação de Testes Independentes e Isolados (10%): Análise da autonomia e isolamento dos testes, permitindo execução independente.
+
+Execução em Mais de Um Navegador (10%): Avaliação da configuração para execução em diferentes navegadores, assegurando compatibilidade.
+
+Geração de Relatórios com Allure Report (8%): Verificação da integração adequada do Allure Report para apresentação clara dos resultados dos testes.
+Execução de Testes no Jenkins (10%): Análise da execução automatizada no Jenkins, evidenciando a integração eficiente com a prática de integração contínua.
+
+
+
+4. Submissão do Projeto:
+
+Após a conclusão, submeta o projeto para um repositório no GitHub.
+Certifique-se de que o repositório esteja organizado e inclua um README explicativo sobre como executar os testes.
+Lembramos que a pontuação total é de 100%, e para obter a Certificação Rumos Expert, é necessário atingir um score mínimo de 65%.

@@ -1,5 +1,6 @@
 package PageObjects;
 
+import Utilities.testUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,7 +13,12 @@ import java.time.Duration;
 
 public class SignInPage {
 
+    // Webdriver initialization
     private final WebDriver driver;
+    public SignInPage(WebDriver driver) {
+        this.driver = driver;
+    }
+
 
     private WebElement register;
     private WebElement login;
@@ -24,9 +30,7 @@ public class SignInPage {
     private final By usernameField = By.name("username");
     private final By passwordField = By.name("password");
 
-    public SignInPage(WebDriver driver) {
-        this.driver = driver;
-    }
+
 
     public void clickRegisterButton() {
 
@@ -58,6 +62,20 @@ public class SignInPage {
         login.click();
     }
 
+    public void enterSpecifiedUsername(String usernameString) {
 
+        username = new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.elementToBeClickable(usernameField));
+        username.clear();
+        username.sendKeys(usernameString);
 
+    }
+    public void enterSpecifiedPassword(String passwordString) {
+
+        password = new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.elementToBeClickable(passwordField));
+        password.clear();
+        password.sendKeys(passwordString);
+        testUtils.sleep(1000);
+    }
 }

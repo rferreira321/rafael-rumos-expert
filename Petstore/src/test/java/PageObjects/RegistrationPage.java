@@ -1,5 +1,6 @@
 package PageObjects;
 
+import Utilities.testUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,9 +12,19 @@ import java.time.Duration;
 
 public class RegistrationPage {
 
-
+    // Webdriver initialization
     private final WebDriver driver;
-    Faker faker = new Faker();
+    public RegistrationPage(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    // I created this method to simplify the element grabing process with timeout and expected conditions. It makes the code easier to read =)
+    public WebElement grabElement(By elementField) {
+        return new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.elementToBeClickable(elementField));
+    }
+
+
 
     private WebElement username;
     private WebElement password;
@@ -46,9 +57,12 @@ public class RegistrationPage {
     private final By countryField = By.name("account.country");
     private final By saveButton = By.xpath("//input[@name='newAccount']");
 
-    String usernameString = faker.name().username();
-    String passwordString = faker.internet().password();
-    String firstNameString = faker.name().firstName();
+    // Lib to mock user data like username, password, etc... https://github.com/DiUS/java-faker
+    public static Faker faker = new Faker();
+
+    public static String usernameString;
+    public static String passwordString;
+    public static String firstNameString;
     String lastNameString = faker.name().lastName();
     String emailString = faker.internet().emailAddress();
     String phoneString = faker.phoneNumber().cellPhone();
@@ -59,6 +73,8 @@ public class RegistrationPage {
     String zipString = faker.address().zipCode();
     String countryString = faker.address().country();
 
+
+    // methods to allow access to variables with fake data without needing to import individual variables
     public String username() {
         return usernameString;
     }
@@ -69,27 +85,21 @@ public class RegistrationPage {
         return firstNameString;
     }
 
-    public RegistrationPage(WebDriver driver) {
-        this.driver = driver;
-    }
-
-    public WebElement grabElement(By elementField) {
-        return new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.elementToBeClickable(elementField));
-    }
-
-
+    // method to fill all fields in the account registration page
     public void fillAllFields() {
         username = grabElement(usernameField);
+        usernameString = faker.name().username();
         username.sendKeys(usernameString);
 
         password = grabElement(passwordField);
+        passwordString = faker.internet().password();
         password.sendKeys(passwordString);
 
         passwordRepeat = grabElement(passwordRepeatField);
         passwordRepeat.sendKeys(passwordString);
 
         firstName = grabElement(firstNameField);
+        firstNameString = faker.name().firstName();
         firstName.sendKeys(firstNameString);
 
         lastName = grabElement(lastNameField);
@@ -122,8 +132,10 @@ public class RegistrationPage {
     }
 
     public void clickOnSaveButton() {
+        testUtils.sleep(1000);
         save = grabElement(saveButton);
         save.click();
+        testUtils.sleep(1000);
     }
 
 
