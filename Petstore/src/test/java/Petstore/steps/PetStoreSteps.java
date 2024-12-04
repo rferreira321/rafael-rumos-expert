@@ -8,10 +8,11 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
 import Config.BrowserConfig;
+import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
 
 import static PageObjects.RegistrationPage.usernameString;
-import static PageObjects.RegistrationPage.zipString;
+
 
 
 public class PetStoreSteps {
@@ -60,7 +61,7 @@ public class PetStoreSteps {
     @Given("I fill all the necessary fields")
     public void i_fill_all_the_necessary_fields() {
         registrationPage.fillAllFields();
-        System.out.println(zipString);
+
     }
 
 
@@ -71,6 +72,7 @@ public class PetStoreSteps {
 
     @Then("I see the actions page")
     public void i_see_the_actions_page() {
+        testUtils.sleep(1000);
         String actualURL = driver.getCurrentUrl();
         Assert.assertEquals(actualURL, "https://petstore.octoperf.com/actions/Catalog.action");
     }
@@ -100,9 +102,9 @@ public class PetStoreSteps {
     public void i_enter_my_purchase_credentials() {
         String purchaseUsername = "purchaseOrder";
         String purchasePassword = "automation";
-        String purchaseFirstName = "rafa";
-        signInPage.enterUsername(username);
-        signInPage.enterPassword(password);
+        firstName = "purchase";
+        signInPage.enterUsername(purchaseUsername);
+        signInPage.enterPassword(purchasePassword);
     }
 
 

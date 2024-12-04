@@ -70,7 +70,7 @@ public class RegistrationPage {
     String address2String = faker.address().streetAddressNumber();
     String cityString = faker.address().city();
     String stateString = faker.address().state();
-    public static String zipString = faker.address().zipCode();
+    String zipString = faker.address().zipCode();
     String countryString = faker.address().country();
 
 
@@ -132,10 +132,10 @@ public class RegistrationPage {
     }
 
     public void clickOnSaveButton() {
-        testUtils.sleep(1000);
+
         save = grabElement(saveButton);
         save.click();
-        testUtils.sleep(1000);
+        testUtils.sleep(3000);
     }
 
 
