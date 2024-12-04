@@ -11,6 +11,7 @@ import Config.BrowserConfig;
 import org.testng.Assert;
 
 import static PageObjects.RegistrationPage.usernameString;
+import static PageObjects.RegistrationPage.zipString;
 
 
 public class PetStoreSteps {
@@ -59,6 +60,7 @@ public class PetStoreSteps {
     @Given("I fill all the necessary fields")
     public void i_fill_all_the_necessary_fields() {
         registrationPage.fillAllFields();
+        System.out.println(zipString);
     }
 
 
