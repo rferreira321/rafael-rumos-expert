@@ -45,6 +45,7 @@ public class PetStoreSteps {
     @Given("I access the petstore Page")
     public void i_access_the_petstore_page() {
         driver.get("https://petstore.octoperf.com/");
+        testUtils.sleep(1000);
         startPage.clickEnterStore();
     }
 
