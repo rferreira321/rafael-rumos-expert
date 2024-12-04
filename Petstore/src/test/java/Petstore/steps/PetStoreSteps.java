@@ -33,6 +33,7 @@ public class PetStoreSteps {
 
     @Given("I have a Selenium using {string}")
     public void i_have_a_selenium_using(String browser) {
+        testUtils.sleep(1000);
         driver = BrowserConfig.openBrowser(browser);
         startPage = new StartPage(driver);
         actionsPage = new ActionsPage(driver);
