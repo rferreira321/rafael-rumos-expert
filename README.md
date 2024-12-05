@@ -6,6 +6,8 @@ The website tested is [JPetStore Demo](https://petstore.octoperf.com/)
 # Author
 Rafael Ferreira - [LinkedIn](https://www.linkedin.com/in/rafael--ferreira/)
 
+Thanks to Sara Cunha for helping with the webdriver instantion issue! =D
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Prerequisites](#prerequisites)
@@ -44,13 +46,24 @@ Verify Maven setup: Ensure Maven is correctly installed by running:
 This should display the Maven version.
 
 Download dependencies: Use Maven to install the necessary dependencies defined in the pom.xml:
-
+Access the 'Petstore' project directory and execute the command:
 ```mvn clean install```
 
 # Running-Tests
+Access the 'Petstore' project directory and execute the command:
 To execute tests, use the following Maven command:
 
 ```mvn clean test```
+
+Running tests in jenkins:
+Configure your Root POM directory with:
+```
+Petstore/pom.xml
+```
+And for Allure report jenkins plugin:
+```
+Petstore/target/surefire-reports
+```
 
 # Viewing-the-Allure-Report
 Generate and serve the Allure report:
