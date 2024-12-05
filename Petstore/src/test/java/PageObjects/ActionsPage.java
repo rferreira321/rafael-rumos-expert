@@ -58,7 +58,8 @@ public class ActionsPage {
     }
 
     public String getWelcomeText() {
-        welcomeText = grabElement(welcomeTextElement);
+        welcomeText = new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.visibilityOfElementLocated(welcomeTextElement));
         return welcomeText.getText();
     }
 
