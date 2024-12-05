@@ -48,10 +48,12 @@ public class PetStoreSteps {
     @Given("I click the Sign In button")
     public void i_click_the_sign_in_button() {
         actionsPage.clickSignInButton();
+        testUtils.sleep(1000);
     }
 
     @Given("I click the register button")
     public void i_click_the_register_button() {
+        testUtils.sleep(1000);
         signInPage.clickRegisterButton();
     }
 
