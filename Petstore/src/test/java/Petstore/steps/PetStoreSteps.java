@@ -10,10 +10,6 @@ import io.cucumber.java.en.Then;
 import Config.BrowserConfig;
 import org.testng.Assert;
 
-//import static PageObjects.RegistrationPage.usernameString;
-
-
-
 public class PetStoreSteps {
 
     WebDriver driver;

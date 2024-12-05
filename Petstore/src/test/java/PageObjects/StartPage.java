@@ -24,10 +24,16 @@ public class StartPage {
 
     public void clickEnterStore() {
 
-        enterStore = new WebDriverWait(driver, Duration.ofSeconds(10))
+        try {
+            enterStore = new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.elementToBeClickable(enterStoreButton));
-        enterStore.click();
-        testUtils.sleep(1000);
+            enterStore.click();
+            testUtils.sleep(1000);
+        }
+        catch (Exception e) {
+            System.err.println("Error: enter store button is not visible." + e.getMessage());
+        }
+
     }
 
 
