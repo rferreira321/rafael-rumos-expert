@@ -25,6 +25,8 @@ Before running the project, ensure the following are installed on your system:
 - **Allure CLI** (optional for viewing reports):  
   [Installation Instructions](https://docs.qameta.io/allure/#_installing_a_commandline)
 - **Cucumber**
+- Chrome
+- Firefox
 
 # Setup-instructions
 Clone the repository:
