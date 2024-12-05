@@ -5,6 +5,7 @@ The website tested is [JPetStore Demo](https://petstore.octoperf.com/)
 
 # Author
 Rafael Ferreira - [LinkedIn](https://www.linkedin.com/in/rafael--ferreira/)
+Thanks to Sara Cunha for helping with the webdriver instantion issue! =D
 
 ## Table of Contents
 1. [Introduction](#introduction)
