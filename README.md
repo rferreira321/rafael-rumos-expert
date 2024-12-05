@@ -1,4 +1,4 @@
-# Rafael Rumos Expert Certification Project
+# Rumos Expert Certification Project
 
 A Selenium-based test automation project built with Java, Maven, Selenium, Cucumber, TestNG and designed to validate web application functionality with detailed reporting using Allure.
 The website tested is [JPetStore Demo](https://petstore.octoperf.com/)
@@ -17,20 +17,16 @@ Rafael Ferreira - [LinkedIn](https://www.linkedin.com/in/rafael--ferreira/)
 ## Introduction
 This project automates web application testing using Selenium WebDriver, Java, and Maven. Allure is used to generate clear and interactive test reports.
 
-It uses:
-- **Selenium**: For browser automation.
-- **TestNG**: For managing and running test cases (allows parallel test execution)
-- **Cucumber**: For Behavior-Driven Development (BDD) test scenarios.
-- **Allure**: For detailed and interactive reporting.
-
 ## Prerequisites
 Before running the project, ensure the following are installed on your system:
 - IDE: InteliJ or Eclipse
-- **Java JDK 8+**: [Download Here](https://www.oracle.com/java/technologies/javase-downloads.html)
+- **Java JDK 21+**: [Download Here](https://www.oracle.com/java/technologies/javase-downloads.html)
 - **Apache Maven**: [Download Here](https://maven.apache.org/download.cgi)
 - **Allure CLI** (optional for viewing reports):  
   [Installation Instructions](https://docs.qameta.io/allure/#_installing_a_commandline)
 - **Cucumber**
+- Chrome
+- Firefox
 
 # Setup-instructions
 Clone the repository:
