@@ -135,7 +135,7 @@ public class RegistrationPage {
 
         save = grabElement(saveButton);
         save.click();
-        testUtils.sleep(3000);
+        testUtils.sleep(1000);
     }
 
 

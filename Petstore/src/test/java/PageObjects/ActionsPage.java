@@ -50,7 +50,6 @@ public class ActionsPage {
 
 
 
-
     public void clickSignInButton() {
 
         signIn = grabElement(signInButton);
@@ -60,7 +59,6 @@ public class ActionsPage {
 
     public String getWelcomeText() {
         welcomeText = grabElement(welcomeTextElement);
-        testUtils.sleep(1000);
         return welcomeText.getText();
     }
 

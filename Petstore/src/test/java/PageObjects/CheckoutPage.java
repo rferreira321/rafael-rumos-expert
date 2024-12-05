@@ -24,20 +24,15 @@ public class CheckoutPage {
                 .until(ExpectedConditions.elementToBeClickable(elementField));
     }
 
-    private WebElement creditCardNumber;
-    private WebElement expiryDate;
     private WebElement continueButton;
     private WebElement confirmButton;
     private WebElement confirmationText;
     private WebElement boughtItem;
 
-    private final By creditCardNumberField = By.name("order.creditCard");
-    private final By expiryDateField = By.name("order.expiryDate");
     private final By continueButtonElement = By.name("newOrder");
     private final By confirmButtonElement = By.xpath("//a[normalize-space()='Confirm']");
     private final By confirmationTextElement = By.xpath("//li[normalize-space()='Thank you, your order has been submitted.']");
     private final By boughtItemElement = By.xpath("//td[contains(text(),'Adult Female')]");
-
 
     public void clickContinueButton() {
         continueButton = grabElement(continueButtonElement);

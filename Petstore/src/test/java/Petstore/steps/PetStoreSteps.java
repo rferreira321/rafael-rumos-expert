@@ -8,10 +8,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
 import Config.BrowserConfig;
-import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
 
-import static PageObjects.RegistrationPage.usernameString;
+//import static PageObjects.RegistrationPage.usernameString;
 
 
 
@@ -81,8 +80,7 @@ public class PetStoreSteps {
 
     @Then("I log in with the new user")
     public void i_log_in_with_the_new_user() {
-        i_click_the_sign_in_button();
-        username = usernameString;
+        username = registrationPage.username();
         password = registrationPage.password();
         firstName = registrationPage.firstName();
         signInPage.enterUsername(username);
