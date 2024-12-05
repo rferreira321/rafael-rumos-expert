@@ -109,4 +109,4 @@ Solve the test flakiness by debugging the known issues mentioned above.
 
 Improve function documentation.
 
-Reduce introduced sleeps by better understanding where failures happening.
+Reduce introduced sleeps by better understanding where failures are happening.
