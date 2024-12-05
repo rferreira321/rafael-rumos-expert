@@ -66,10 +66,34 @@ Open the report manually by navigating to allure-report/index.html.
 
 After running several executions there's still some flakiness in the tests. Sometimes all tests pass but other times 2 or 3 tests fail with no obvious pattern.
 Maybe trying to change the way webdriver is instantiated might fix the issue.
-There are two main reasons they fail:
 
-One is:
+Below are some of the errors found:
+
 ```Session ID is null. Using WebDriver after calling quit()?```
+Maybe due to incorrect webdriver instantiation?
 
-Another one is:
 ```stale element reference: stale element not found```
+Element is not found in the DOM, but why?
+Added a try catch to debug but couldn't reproduce the scenario
+```
+    public void clickEnterStore() {
+
+        try {
+            enterStore = new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.elementToBeClickable(enterStoreButton));
+            enterStore.click();
+            testUtils.sleep(1000);
+        }
+        catch (Exception e) {
+            System.err.println("Error: enter store button is not visible." + e.getMessage());
+        }
+
+    }
+```
+
+
+```
+org.openqa.selenium.remote.UnreachableBrowserException: 
+Error communicating with the remote browser. It may have died.
+```
+Not sure how this happens :\
