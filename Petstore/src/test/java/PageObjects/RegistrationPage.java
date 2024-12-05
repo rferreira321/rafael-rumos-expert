@@ -71,7 +71,6 @@ public class RegistrationPage {
     String cityString = faker.address().city();
     String stateString = faker.address().state();
     String zipString = faker.address().zipCode();
-    String countryString = faker.address().country();
 
 
     // methods to allow access to variables with fake data without needing to import individual variables
@@ -127,7 +126,7 @@ public class RegistrationPage {
         zip.sendKeys(zipString);
 
         country = grabElement(countryField);
-        country.sendKeys(countryString);
+        country.sendKeys("Portugal");
 
     }
 
