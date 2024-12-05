@@ -2,6 +2,9 @@
 
 A Selenium-based test automation project built with Java, Maven, Selenium, Cucumber, TestNG and designed to validate web application functionality with detailed reporting using Allure.
 
+# Author
+Rafael Ferreira - [LinkedIn](https://www.linkedin.com/in/rafael--ferreira/)
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Prerequisites](#prerequisites)
@@ -66,5 +69,3 @@ Alternatively, generate a static HTML report:
 
 Open the report manually by navigating to allure-report/index.html.
 
-Author
-Rafael Ferreira - [LinkedIn](https://www.linkedin.com/in/rafael--ferreira/)
