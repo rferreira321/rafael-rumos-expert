@@ -1,4 +1,4 @@
-# Rafael Rumos Expert Certification Project
+# Rumos Expert Certification Project
 
 A Selenium-based test automation project built with Java, Maven, Selenium, Cucumber, TestNG and designed to validate web application functionality with detailed reporting using Allure.
 The website tested is [JPetStore Demo](https://petstore.octoperf.com/)
