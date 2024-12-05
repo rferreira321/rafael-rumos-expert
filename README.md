@@ -20,11 +20,14 @@ This project automates web application testing using Selenium WebDriver, Java, a
 ## Prerequisites
 Before running the project, ensure the following are installed on your system:
 - IDE: InteliJ or Eclipse
+-   In your IDE plugins:
+  - **Cucumber**
+  - **TestNG**
+  - **JUnit**
 - **Java JDK 21+**: [Download Here](https://www.oracle.com/java/technologies/javase-downloads.html)
 - **Apache Maven**: [Download Here](https://maven.apache.org/download.cgi)
 - **Allure CLI** (optional for viewing reports):  
   [Installation Instructions](https://docs.qameta.io/allure/#_installing_a_commandline)
-- **Cucumber**
 - Chrome
 - Firefox
 
@@ -63,7 +66,7 @@ Open the report manually by navigating to allure-report/index.html.
 After running several executions there's still some flakiness in the tests. Sometimes all tests pass but other times 2 or 3 tests fail with no obvious pattern.
 Maybe trying to change the way webdriver is instantiated might fix the issue.
 
-Below are some of the errors found:
+In the folder of this project ```Evidences/"Failing runs"``` you can find logs of the failing runs, but below I've compiled are some of the most frequent errors found:
 
 ```Session ID is null. Using WebDriver after calling quit()?```
 Maybe due to incorrect webdriver instantiation?
@@ -93,3 +96,17 @@ org.openqa.selenium.remote.UnreachableBrowserException:
 Error communicating with the remote browser. It may have died.
 ```
 Not sure how this happens :\
+
+# Improvements that could be done in the future
+
+Add more extensive tests such as:
+- Add multiple items to the cart
+- Remove items from the cart
+- Enter an invalid username and password
+- Try to register an already registered user
+
+Solve the test flakiness by debugging the known issues mentioned above.
+
+Improve function documentation.
+
+Reduce introduced sleeps by better understanding where failures are happening.
