@@ -20,11 +20,14 @@ This project automates web application testing using Selenium WebDriver, Java, a
 ## Prerequisites
 Before running the project, ensure the following are installed on your system:
 - IDE: InteliJ or Eclipse
+-   In your IDE plugins:
+  - **Cucumber**
+  - **TestNG**
+  - **JUnit**
 - **Java JDK 21+**: [Download Here](https://www.oracle.com/java/technologies/javase-downloads.html)
 - **Apache Maven**: [Download Here](https://maven.apache.org/download.cgi)
 - **Allure CLI** (optional for viewing reports):  
   [Installation Instructions](https://docs.qameta.io/allure/#_installing_a_commandline)
-- **Cucumber**
 - Chrome
 - Firefox
 
