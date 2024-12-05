@@ -196,6 +196,7 @@ public class PetStoreSteps {
 
     @After
     public void close() {
+        testUtils.sleep(15000);
         BrowserConfig.closeBrowser(driver);
     }
 
